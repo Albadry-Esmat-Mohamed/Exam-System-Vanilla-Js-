@@ -1,0 +1,311 @@
+*{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.all{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(90deg, #f7f7f7 , #f0ad4e);
+}
+.mainContainer{
+    height: 90%;
+    display: flex;
+}
+main{
+    /* background-color: rgb(27, 27, 27); */
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.time{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 180px;
+}
+
+.flag div {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px ;
+    background-color: #5bc0de;
+    text-align: center;
+    margin: 10px auto;
+    color: rgb(255, 255, 255);
+    width: 70%;
+    transition: 0.5s all ease;
+
+}
+/* .flag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.flag div:hover{
+    transform: scale(1.2);
+    background-color: #0275d8;
+    /* box-shadow: none; */
+    /* color: white; */
+    /* background-color: rgb(27, 27, 27); */
+}
+
+.heart {    
+    transition: 0.5s all ease;
+	font-size: 150px;
+	/* color: #e00; */
+	animation: beat 1s infinite alternate;
+	transform-origin: center;
+}
+
+
+/* Heart beat animation */
+@keyframes beat{
+	to { transform: scale(1.5); }
+}
+
+#timer{
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    color: #0275d8;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    /* padding: 10px; */
+    color: #ffffff;
+    background-color:#5bc0de ;
+    transition: all 0.5s ease;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ques{
+    margin-top: 10px;
+    margin: auto;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    width: 80%;
+    position: relative;
+    height: 10%;
+    background-color: #5bc0de;
+    transition: 0.3s transform ease;
+}
+.ques:hover{
+    box-shadow: none;
+    color: white;
+    background-color: #0275d8;
+    transform: scale(1.2);
+    /* box-shadow:  0 0 5px 5px #0275d8 ; */
+}
+
+.answers{
+    margin: auto;
+    margin-bottom: 50px;
+    width: 60%;
+    padding: 20px;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+.answers input{
+    font-size: 20px !important;
+}
+
+.radio{
+    transition: 0.3s background-color ease;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    background-color: #5bc0de;
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+/* ///////////////////////////////////////////////////// */
+
+
+
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    /* background-color: #0275d8; */
+    /* Not removed via appearance */
+    margin: 0;
+
+    font: inherit;
+    color: rgb(255, 255, 255);    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    /* border-radius: 50%; */
+    transform: translateY(-0.075em);
+    
+        display: grid;
+        place-content: center;
+    }
+    
+    input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em rgb(255, 255, 255)
+    ;
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+    }
+
+    input[type="radio"]:checked::before {
+        transform: scale(1);
+    }
+
+    input[type="radio"]:focus {
+        /* outline: max(2px, 0.15em) solid #0275d8
+        ; */
+        outline-offset: max(2px, 0.15em);
+    }
+
+/* ///////////////////////////////////////////// */
+
+span{
+    width: 100%;
+    padding-left: 15px ;
+}
+.radio:hover{
+    color: white;
+    box-shadow: none;
+    background-color: #0275d8;
+    
+}
+label{
+    width: 100%;
+    padding: 5px;
+    /* background-color: aquamarine; */
+}
+
+aside{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* input:checked .radio,
+input:hover {
+    background-color: rgb(27, 27, 27);
+} */
+
+.buttons{
+    padding: 15px;
+    display: flex;
+    height: 15%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/* 
+
+#0275d8
+
+rgb(27, 27, 27)
+
+ */
+
+.btn{
+    color: white;
+    /* text-align: center; */
+    cursor: pointer;
+    background-color: #0275d8;
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    background-color:#5bc0de ;
+    
+    transition: all 0.5s ease;
+    }
+
+.btn:hover{
+
+    font-size: 40px;
+    
+    background-color:#0275d8;
+}
+.previous{
+    align-self: center;
+    text-align: center;
+    display: none;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+footer{
+
+    
+    height: 10%;
+    
+    /* background-color: rgb(31, 29, 29); */
+
+}
+
+.submit {
+
+
+
+    cursor: pointer;
+
+    color: aliceblue;
+
+    display: flex;
+
+    width: 100%;
+
+    height: 100%;
+
+    color: white;
+
+    background-color:#5bc0de ;
+
+    transition: all 0.5s ease;
+}
+
+.submit:hover{
+
+    font-size: 40px;
+
+
+    background-color:#0275d8;
+}

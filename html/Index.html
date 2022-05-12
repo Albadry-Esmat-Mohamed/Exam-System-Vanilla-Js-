@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Exam Form</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="teachandlern"></div>
+        <div class="signUp">
+            <h2>Sign Up</h2>
+            <form id="form">
+                <div class="fName">
+                    <input type="text" id="Fname" placeholder="First Name"  pattern="[A-Za-z]{3,}"
+                    >
+                </div>
+
+                <div class="lName">
+                    <input type="text" id="Lname"  placeholder="Last Name"  pattern="[A-Za-z]{3,}">
+                </div>
+
+                <div class="email">
+                    <input 
+                    type="email" 
+                    id="Email" 
+                    required 
+                    placeholder="Email"  
+                    > 
+                </div>
+                
+                <div class="pass">
+                    <input type="password"  id="pass" required Minlength = 8 placeholder="Password">
+                </div>
+
+                <div class="repass">
+                    <input type="password" id="repass" required placeholder="Re-Enter Password">
+                </div>
+                
+                
+                <div class="form-submit-button">
+                    <button type="submit" id="submit">Create Account</button>
+                    <div class="hidden">
+                        The 2 Passwords Are Not The Same !!!.
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="aside">
+        </div>
+    </div> 
+
+
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
